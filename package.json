@@ -1,0 +1,24 @@
+{
+  "name": "event-time",
+  "version": "0.0.1",
+  "description": "Event Time Module",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derekvincent/event-time.git"
+  },
+  "author": "Derek Vincent",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/derekvincent/event-time/issues"
+  },
+  "homepage": "https://github.com/derekvincent/event-time#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
