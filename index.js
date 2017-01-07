@@ -5,13 +5,13 @@
 
 
 
-module.exports = EventTime;
+module.exports = TimePeriod;
 
 /**
  * Constructor for the duration time via a formatted string HH:MM:ss.ss
  * @param {string} time
  */
-function EventTime(time) {
+function TimePeriod(time) {
 
     // need to check if set
     // if not then default to 00:00:00.0
@@ -23,7 +23,7 @@ function EventTime(time) {
  * @method setTime
  * @param {string} time
  */
-EventTime.prototype.setTime = function(time) {
+TimePeriod.prototype.setTime = function(time) {
 
     var nInternalTime = convertToRaw(time);
     this.rawTime =  nInternalTime;
@@ -33,7 +33,7 @@ EventTime.prototype.setTime = function(time) {
  * Gets the time duration in the string formatted value
  * @return {string} formmated value
  */
-EventTime.prototype.getTime = function() {
+TimePeriod.prototype.getTime = function() {
 
     return convertToFormat(this.rawTime);
 };
@@ -44,7 +44,7 @@ EventTime.prototype.getTime = function() {
  * @param {string} time
  * @return {number} sum
  */
-EventTime.prototype.addTime = function(time) {
+TimePeriod.prototype.addTime = function(time) {
 
     // Not sure if we want to just calculate the add or to store it
     var inTime = convertToRaw(time);
@@ -57,14 +57,14 @@ EventTime.prototype.addTime = function(time) {
  * @param time
  * @return {number}
  */
-EventTime.prototype.diffTimeRaw = function(time) {
+TimePeriod.prototype.diffTimeRaw = function(time) {
     var inTime = convertToRaw(time);
-    var totalDiffernce = this.rawTime - inTime;
-    return totalDiffernce;
-}
+    var totalDifference = this.rawTime - inTime;
+    return totalDifference;
+};
 
 // This Function might not stay or maybe usefull in the sorter
-EventTime.prototype.getRawtime = function() {
+TimePeriod.prototype.getRawtime = function() {
     return this.rawTime;
 };
 
@@ -95,7 +95,7 @@ var convertToFormat = function(rawTime) {
 
     var sHours,
         sMinutes,
-        sSeconds = "00";
+        sSeconds;
 
     sHours = Math.floor(rawTime /  3600);
     rawTime %= 3600;

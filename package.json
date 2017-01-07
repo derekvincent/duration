@@ -1,7 +1,7 @@
 {
-  "name": "event-time",
+  "name": "time-period",
   "version": "0.0.1",
-  "description": "Event Time Module",
+  "description": "Module fore managing periods of time wiht specific to dates.",
   "main": "index.js",
   "private": true,
   "scripts": {
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/derekvincent/event-time.git"
+    "url": "git+https://github.com/derekvincent/time-period.git"
   },
   "author": "Derek Vincent",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/derekvincent/event-time/issues"
+    "url": "https://github.com/derekvincent/time-period/issues"
   },
-  "homepage": "https://github.com/derekvincent/event-time#readme",
+  "homepage": "https://github.com/derekvincent/time-period#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0"
