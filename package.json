@@ -1,5 +1,5 @@
 {
-  "name": "time-period",
+  "name": "@offcamber/duration",
   "version": "0.0.1",
   "description": "Module fore managing periods of time wiht specific to dates.",
   "main": "index.js",
