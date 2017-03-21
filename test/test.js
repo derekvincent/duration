@@ -27,7 +27,7 @@ describe('Duration', function(){
         });
 
         it('should take one minute', function() {
-            var result = new TimePeriod("00:01:00");
+            var result = new TimePeriod("00:01:00");cd
             expect(result.getRawTime()).to.equal(60 * 1000);
         });
 
